@@ -94,7 +94,7 @@ alexaApp.intent('callSusiApi',{
 		r({
 			url: queryUrl,
 			json: true
-		}, function (error, response, body) {
+		}, function (error, response1, body) {
 			if (!error && response.statusCode === 200) {
 				message = body.answers[0].actions[0].expression;
 			}
