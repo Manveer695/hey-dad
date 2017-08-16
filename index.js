@@ -91,7 +91,7 @@ alexaApp.intent('callSusiApi',{
 		var queryUrl = 'http://api.susi.ai/susi/chat.json?q='+'Share';
 		var message = '';
 		// Wait until done and reply
-		request({
+		r({
 			url: queryUrl,
 			json: true
 		}, function (error, response, body) {
