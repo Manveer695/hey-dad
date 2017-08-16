@@ -88,9 +88,21 @@ alexaApp.intent('callSusiApi',{
 		//our joke which we share to both the companion app and the Alexa device
 		var query = request.slot('query');
 		console.log(query);
-		response.card("hi");
-		response.say("hi");
-		response.send();
+		var queryUrl = 'http://api.susi.ai/susi/chat.json?q='+'Share';
+		var message = '';
+		// Wait until done and reply
+		request({
+			url: queryUrl,
+			json: true
+		}, function (error, response, body) {
+			if (!error && response.statusCode === 200) {
+				message = body.answers[0].actions[0].expression;
+			}
+			response.card(message);
+			response.say(message);
+			response.send();
+		});
+
 });
 
 //a shortcut to get our app schema
