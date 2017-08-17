@@ -99,7 +99,6 @@ alexaApp.intent('callSusiApi',{
 				message = body.answers[0].actions[0].expression;
 				console.log(message);
 			}
-			response.card(message);
 			response.say(message);
 			response.send();
 		});
