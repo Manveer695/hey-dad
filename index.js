@@ -95,7 +95,7 @@ alexaApp.intent('callSusiApi',{
 			url: queryUrl,
 			json: true
 		}, function (error, response1, body) {
-			console.log("ddf");
+			console.log(body);
 			if (!error && response1.statusCode === 200) {
 				message = body.answers[0].actions[0].expression;
 			}
