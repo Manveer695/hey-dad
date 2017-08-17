@@ -99,12 +99,12 @@ alexaApp.intent('callSusiApi',{
 				message = body.answers[0].actions[0].expression;
 				console.log(message);
 				console.log(JSON.stringify(response));
+				console.log(JSON.stringify(response));
+				response.say("message");
+				console.log(JSON.stringify(response));
+				response.send();
 			}
 		});
-		console.log(JSON.stringify(response));
-		response.say("message");
-		console.log(JSON.stringify(response));
-		response.send();
 });
 
 //a shortcut to get our app schema
