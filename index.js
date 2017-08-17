@@ -98,6 +98,7 @@ alexaApp.intent('callSusiApi',{
 			if (!error && response1.statusCode === 200) {
 				message = body.answers[0].actions[0].expression;
 				console.log(message);
+				console.log(JSON.stringify(response));
 			}
 			response.say(message);
 			response.send();
