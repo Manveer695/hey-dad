@@ -95,6 +95,7 @@ alexaApp.intent('callSusiApi',{
 			url: queryUrl,
 			json: true
 		}, function (error, response1, body) {
+			console.log("ddf");
 			if (!error && response1.statusCode === 200) {
 				message = body.answers[0].actions[0].expression;
 			}
@@ -102,7 +103,6 @@ alexaApp.intent('callSusiApi',{
 			response.say(message);
 			response.send();
 		});
-
 });
 
 //a shortcut to get our app schema
