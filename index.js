@@ -103,6 +103,7 @@ alexaApp.intent('callSusiApi',{
 		});
 		console.log(JSON.stringify(response));
 		response.say("message");
+		console.log(JSON.stringify(response));
 		response.send();
 });
 
